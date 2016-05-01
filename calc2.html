@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/autoNumeric.min.js"></script>
+<script>
+
+
+
+
+$(function() {
+$('#row1').hide();
+});
+	
+</script>
+<script src="js/cal2.js"></script>
+<script>
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<div class="row"  id="row1">
+<div class="col-sm-6">
+<table width="100%" border="1" style="background:url(img/bg.gif) repeat-x ">
+  <tbody>
+    <tr>
+      <td colspan="2" style="font-weight:bold; text-align:center">Investment Property Info:</td>
+      
+    </tr>
+ 
+    <tr>
+      <td style="font-weight:bold; text-align:center">Dwelling Value:</td>
+      <td style="font-weight:bold; text-align:center"><input class="auto" value="115000.00" data-a-sign=' $' type="text" id="i_d3" > </td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; text-align:center">Purchase Price:</td>
+      <td style="font-weight:bold; text-align:center" ><input class="auto" value="125000.00" data-a-sign="$ " type="text" id="i_d4" ></td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; text-align:center">Down Payment:</td>
+      <td style="font-weight:bold; text-align:center"><input class="auto" value="25000.00" data-a-sign="$ " type="text" id="i_d5" ></td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; text-align:center">Loan Amount:</td>
+      <td style="font-weight:bold; text-align:center"><input class="auto" value="100000" data-a-sign="$ " type="text" id="i_d6" ></td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; text-align:center">Loan to Value:</td>
+      <td style="font-weight:bold; text-align:center"><input class="auto" value="80" data-a-sign=" % " data-p-sign='s' type="text" id="i_d7" ></td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; text-align:center">Loan Type:</td>
+      <td style="font-weight:bold; text-align:center">Fixed</td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; text-align:center">Amortization Schedule:</td>
+      <td style="font-weight:bold; text-align:center"><input class="auto" value="30" data-v-min="0" data-v-max="100" type="text" id="i_d9" ></td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; text-align:center">Rate:</td>
+      <td style="font-weight:bold; text-align:center"><input class="auto" value="5" data-a-sign=" %" data-p-sign='s' data-v-min="0.00" data-v-max="20.00" type="text" id="i_d10" ></td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; text-align:center">Monthly P&I Payment:</td>
+      <td style="font-weight:bold; text-align:center"><input class="auto" value="536.82" data-a-sign="$ " type="text" id="i_d11" ></td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; text-align:center">Monthly Extra Payment</td>
+      <td style="font-weight:bold; text-align:center"><input class="auto" value="0" data-a-sign="$ " type="text" id="i_d12" ></td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; text-align:center">Decrease in No. of PMTs</td>
+      <td style="font-weight:bold; text-align:center"><input class="auto" value="0" type="text" id="i_d13" ></td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; text-align:center">Total Early PMTs</td>
+      <td style="font-weight:bold; text-align:center"><input class="auto" value="0" data-a-sign="$ " type="text" id="i_d14" ></td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; text-align:center">Closing Costs - Expense*:</td>
+      <td style="font-weight:bold; text-align:center"><input class="auto" value="500" data-a-sign="$ " type="text" id="i_d15" ></td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; text-align:center">Closing Costs - Add to Basis*:</td>
+      <td style="font-weight:bold; text-align:center"><input class="auto" value="1500" data-a-sign="$ " type="text" id="i_d16" ></td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; text-align:center">Annual Tax:</td>
+      <td style="font-weight:bold; text-align:center"><input class="auto" value="2400" data-a-sign="$ " type="text" id="i_d17" ></td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; text-align:center">Annual Tax Increase:</td>
+      <td style="font-weight:bold; text-align:center"><input class="auto" value="2" data-a-sign=" % " data-p-sign='s' data-v-min="0" data-v-max="100" type="text" id="i_d18" ></td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; text-align:center">Annual Insurance:</td>
+      <td style="font-weight:bold; text-align:center"><input class="auto" value="1000" data-a-sign="$ " type="text" id="i_d19" ></td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; text-align:center">Annual Ins Increase:</td>
+      <td style="font-weight:bold; text-align:center"><input class="auto" value="2" data-a-sign=" % " data-p-sign='s'  data-v-min="0" data-v-max="100" type="text" id="i_d20" ></td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; text-align:center">Annual HOA:</td>
+      <td style="font-weight:bold; text-align:center"><input class="auto" value="0" data-a-sign="$ " type="text" id="i_d21" ></td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; text-align:center">Annual HOA Increase:</td>
+      <td style="font-weight:bold; text-align:center"><input class="auto" value="2" data-a-sign=" % " data-p-sign='s' data-v-min="0" data-v-max="100" type="text" id="i_d22" ></td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; text-align:center">Property Mgmt Rate:</td>
+      <td style="font-weight:bold; text-align:center"><input class="auto" value="10" data-a-sign="% " data-p-sign='s' data-v-min="0" data-v-max="100" type="text" id="i_d23" ></td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; text-align:center">Annual Misc Exps:</td>
+      <td style="font-weight:bold; text-align:center"><input class="auto" value="500" data-a-sign="$ " type="text" id="i_d24" ></td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; text-align:center">Annual Misc Exps Increase:</td>
+      <td style="font-weight:bold; text-align:center"><input class="auto" value="2" data-a-sign="% "data-p-sign='s' data-v-min="0" data-v-max="100" type="text" id="i_d25" ></td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; text-align:center">Annual Depreciation:</td>
+      <td style="font-weight:bold; text-align:center"><input class="auto" value="4181.82" data-a-sign="$ " type="text" id="i_d26" ></td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; text-align:center">Monthly Rental Income:</td>
+      <td style="font-weight:bold; text-align:center"><input class="auto" value="1200" data-a-sign="$ " type="text" id="i_d27" ></td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; text-align:center">Annual Rent Increase:</td>
+      <td style="font-weight:bold; text-align:center"><input class="auto" value="3" data-a-sign="% "data-p-sign='s' data-v-min="0" data-v-max="100" type="text" id="i_d28"    ></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+</div>
+
+
+<div class="col-sm-6" >ytut
+
+</div>
+
+
+
+</div>
+
+
+<div class="row" >
+<div class="col-sm-3">
+
+<table width="304" border="1">
+  <tbody>
+   <tr>
+      <td  align="center"><strong>Enter Values</strong></td>
+      <td width="118" valign="top"><span id="loan_amount"></span></td>
+       </tr>
+    <tr>
+      <td width="170">Loan Amount</td>
+       <td width="118" valign="top"><span id="loan_amount"></span></td>
+    </tr>
+    <tr>
+      <td>Annual interest rate</td>
+       <td valign="top"><span id="interest_rate"></span></td>
+      
+    </tr>
+     <tr>
+      <td>Loan period in years</td>
+       <td valign="top"><span id="Loan_Years"></span></td>
+    </tr>
+     <tr>
+       <td>Number of payments per year</td>
+       <td valign="top"><input class="auto" value="12"  data-v-min="0" data-v-max="12" type="text" id="Num_Pmt_Per_Year"      ></td>
+     </tr>
+    <tr>
+      <td>Start date of loan</td>
+       <td valign="top"><input type="date"  value="01/01/2016"
+      ></td>
+      
+    </tr>
+     <tr>
+      <td>Optional extra payments</td>
+       <td valign="top"><span id="Scheduled_Extra_Payments"  ></span></td>
+    </tr>
+    
+  </tbody>
+</table>
+
+</div>
+<div class="col-sm-3">
+
+<table width="100%" border="1">
+  <tbody>
+    <tr>
+      <td  align="center"><strong>Loan Summary</strong></td>
+      <td  align="center"><strong>Loan Summary</strong></td>
+      </tr>
+    <tr>
+      <td width="62%">Scheduled payment</td>
+      <td width="38%" valign="top"><span id="Scheduled_Monthly_Payment"></span></td>
+    </tr>
+    <tr>
+      <td>Scheduled number of payments</td>
+      <td valign="top"><span id="Scheduled_num_Payments"></span></td>
+    </tr>
+    <tr>
+      <td>Actual number of payments</td>
+      <td valign="top"><span id="actual_num_Payments"></span></td>
+    </tr>
+    <tr>
+      <td>Total early payments</td>
+      <td valign="top">&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Total interest</td>
+      <td valign="top">&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td valign="top">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+
+</div>
+<div  class="col-sm-4" style="float:right">ff
+</div>
+</div>
+
+<div class="row" >
+<div class="col-sm-12"><table width="100%" border="1">
+  <tbody>
+    <tr>
+      <td width="9%"  align="center"><strong>PmtNo.</strong></td>
+      <td width="11%"  align="center"><strong>Payment Date</strong></td>
+      <td width="44%"  align="center">&nbsp;</td>
+      <td width="4%"  align="center">&nbsp;</td>
+      <td width="4%"  align="center">&nbsp;</td>
+      <td width="4%"  align="center">&nbsp;</td>
+      <td width="4%"  align="center">&nbsp;</td>
+      <td width="4%"  align="center">&nbsp;</td>
+      <td width="4%"  align="center">&nbsp;</td>
+      <td width="4%"  align="center">&nbsp;</td>
+      <td width="4%"  align="center">&nbsp;</td>
+      <td width="4%"  align="center">&nbsp;</td>
+      
+      </tr>
+      </tbody>
+      </table>
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
