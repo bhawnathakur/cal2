@@ -7,13 +7,13 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/autoNumeric.min.js"></script>
+  
 <script>
 
 
 
-
 $(function() {
-$('#row1').hide();
+//$('#row1').hide();
 });
 	
 </script>
@@ -60,7 +60,13 @@ $('#row1').hide();
     </tr>
     <tr>
       <td style="font-weight:bold; text-align:center">Amortization Schedule:</td>
-      <td style="font-weight:bold; text-align:center"><input class="auto" value="30" data-v-min="0" data-v-max="100" type="text" id="i_d9" ></td>
+      <td style="font-weight:bold; text-align:center"><select id="i_d9">
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+        <option value="25" selected>25</option>
+        <option value="30" >30</option>
+      </select></td>
     </tr>
     <tr>
       <td style="font-weight:bold; text-align:center">Rate:</td>
@@ -167,7 +173,7 @@ $('#row1').hide();
   <tbody>
    <tr>
       <td  align="center"><strong>Enter Values</strong></td>
-      <td width="118" valign="top"><span id="loan_amount"></span></td>
+      <td width="118" valign="top"></td>
        </tr>
     <tr>
       <td width="170">Loan Amount</td>
@@ -241,31 +247,19 @@ $('#row1').hide();
 <div  class="col-sm-4" style="float:right">ff
 </div>
 </div>
+<div id="cml">hh</div>
 
-<div class="row" >
-<div class="col-sm-12"><table width="100%" border="1">
-  <tbody>
-    <tr>
-      <td width="9%"  align="center"><strong>PmtNo.</strong></td>
-      <td width="11%"  align="center"><strong>Payment Date</strong></td>
-      <td width="44%"  align="center">&nbsp;</td>
-      <td width="4%"  align="center">&nbsp;</td>
-      <td width="4%"  align="center">&nbsp;</td>
-      <td width="4%"  align="center">&nbsp;</td>
-      <td width="4%"  align="center">&nbsp;</td>
-      <td width="4%"  align="center">&nbsp;</td>
-      <td width="4%"  align="center">&nbsp;</td>
-      <td width="4%"  align="center">&nbsp;</td>
-      <td width="4%"  align="center">&nbsp;</td>
-      <td width="4%"  align="center">&nbsp;</td>
-      
-      </tr>
-      </tbody>
-      </table>
-</div>
-</div>
 
 </div>
-
+<script>
+$( "input" ).keyup(function() {
+	doCount();
+  alert( "Handler for .keyup() called." );
+});
+$( "select" ).change(function() {
+	doCount();
+  alert( "Handler for .keyup() called." );
+})
+</script>
 </body>
 </html>
