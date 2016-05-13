@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Datepicker - Default functionality</title>
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+  });
+  </script>
+</head>
+<body>
+<script>
+var  arr=Array();
+arr[0]=0;
+var jj=0;
+var a=27;
+var b=4;
+var c =Math.floor(a/b);
+
+for(i=0;i<27;i++)
+{
+	z=i%3;
+	arr[jj] +=z;
+	
+	if(z==2)
+	{alert(arr[jj])
+		jj=jj+1;
+		arr[jj]=0;
+		
+	}
+	
+}
+alert(c);
+</script>
+</body>
+</html>

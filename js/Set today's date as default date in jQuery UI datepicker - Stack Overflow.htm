@@ -1,0 +1,2342 @@
+<!DOCTYPE html>
+<html itemscope="" itemtype="http://schema.org/QAPage"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<title>Set today's date as default date in jQuery UI datepicker - Stack Overflow</title>
+    <link rel="shortcut icon" href="http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d">
+    <link rel="apple-touch-icon image_src" href="http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://stackoverflow.com/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="stackoverflow.com">
+    <meta property="og:type" content="website">    
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&amp;a">
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="Set today's date as default date in jQuery UI datepicker">
+    <meta name="twitter:description" property="og:description" itemprop="description" content="I just want today's date  to be the default value in the input that is using jQuery UI's datepicker:
+
+&amp;lt;input id=&quot;mydate&quot; type=&quot;text&quot; /&amp;gt;
+
+
+I tried the below code but it didn't work:
+
+var curre...">
+    <meta property="og:url" content="http://stackoverflow.com/questions/4915990/set-todays-date-as-default-date-in-jquery-ui-datepicker">
+    <link rel="canonical" href="http://stackoverflow.com/questions/4915990/set-todays-date-as-default-date-in-jquery-ui-datepicker">
+
+    
+    
+    <script src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/quant.js" async=""></script><script src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/beacon.js" async=""></script><script src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/analytics.js" async=""></script><script src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/jquery.js"></script>
+    <script src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/stub.js"></script>
+    <link rel="stylesheet" type="text/css" href="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/all.css">
+
+            <link rel="alternate" type="application/atom+xml" title="Feed for question 'Set today's date as default date in jQuery UI datepicker'" href="http://stackoverflow.com/feeds/question/4915990">
+            <meta name="twitter:app:country" content="US">
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:iphone" content="871299723">
+            <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/4915990/set-todays-date-as-default-date-in-jquery-ui-datepicker">
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:ipad" content="871299723">
+            <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/4915990/set-todays-date-as-default-date-in-jquery-ui-datepicker">
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://stackoverflow.com/questions/4915990/set-todays-date-as-default-date-in-jquery-ui-datepicker">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+        
+            StackExchange.ready(function () {
+                    
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:0,shownCommentCount:0,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:4915990});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('1', '4915990');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+            });
+        </script>
+
+
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1462992138,"routeName":"Questions/Show","styleCode":true,"enableUserHovercards":true,"snippets":{"enabled":true,"domain":"stacksnippets.net"},"site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":1,"enableSocialMediaInSharePopup":true},"user":{"fkey":"2e31b00793212811d9ab2dd4948c1e07","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"c6e0526ae801","js/moderator.en.js":"ffe1074c0b58","js/full-anon.en.js":"0d78248700c9","js/full.en.js":"0dc04e04c707","js/wmd.en.js":"67f64ef1d49f","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"3199d1e28733","js/help.en.js":"c8004cc0095d","js/tageditor.en.js":"bd4fb7a0a976","js/tageditornew.en.js":"91e1556377bb","js/inline-tag-editing.en.js":"a815357d00cd","js/revisions.en.js":"2faaeaae2529","js/review.en.js":"029778fd68a6","js/tagsuggestions.en.js":"d1ff9b84abe5","js/post-validation.en.js":"54551839bcfc","js/explore-qlist.en.js":"e71f14781288","js/events.en.js":"abb50484b7e3","js/keyboard-shortcuts.en.js":"847a9c26dd28","js/external-editor.en.js":"4c9146d423ad","js/external-editor.en.js":"4c9146d423ad","js/snippet-javascript.en.js":"52f29aaf80f8","js/snippet-javascript-codemirror.en.js":"5609457b2654"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+        <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script>
+<script src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/full-anon.js" async=""></script><script src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/snippet-javascript.js" async=""></script><script src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/post-validation.js" async=""></script><script src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/prettify-full.js" async=""></script><script src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/external-editor.js" async=""></script><link href="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/cp.css" rel="stylesheet" type="text/css"></head>
+<body class="question-page new-topbar">
+    <noscript><div id="noscript-padding"></div></noscript>
+    
+        <script>(function () { var old = $.fn.contents; $.fn.contents = function () { try { return old.apply(this, arguments); } catch (e) { return $([]); } } })()</script>
+        
+
+
+
+
+    <div id="notify-container"></div>
+    <div id="overlay-header"></div>
+    <div id="custom-header"></div>
+
+
+
+
+
+<div class="topbar">
+    <div class="topbar-wrapper">
+
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="http://stackoverflow.com/">current community</a></h3>
+    </div>
+    <div class="modal-content current-site-container">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+                    <a href="http://chat.stackoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+            </div>
+
+
+
+
+    <a href="http://stackoverflow.com/" class="current-site-link site-link js-gps-track" data-id="1" data-gps-track="
+        site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-stackoverflow" title="Stack Overflow"></div>
+        Stack Overflow
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                    
+
+
+
+    <a href="http://meta.stackoverflow.com/" class="site-link js-gps-track" data-id="552" data-gps-track="
+            site.switch({ target_site:552, item_type:3 }),
+        site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>
+        Meta Stack Overflow
+    </a>
+
+                </li>
+                            <li class="related-site">
+                        <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                    <a class="site-link js-gps-track" href="http://careers.stackoverflow.com/?utm_source=stackoverflow.com&amp;utm_medium=site-ui&amp;utm_campaign=multicollider" data-gps-track="site_switcher.click({ item_type:9 })">
+                        <div class="site-icon favicon favicon-careers" title="Stack Overflow Careers"></div>
+                        Stack Overflow Careers
+                    </a>
+                </li>
+        </ul>
+    </div>
+    <div class="header" id="your-communities-header">
+        <h3>
+your communities        </h3>
+            
+    </div>
+    <div class="modal-content" id="your-communities-section">
+            
+            <div class="call-to-login">
+<a href="https://stackoverflow.com/users/signup?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f4915990%2fset-todays-date-as-default-date-in-jquery-ui-datepicker" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or <a href="https://stackoverflow.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f4915990%2fset-todays-date-as-default-date-in-jquery-ui-datepicker" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list.
+            </div>
+    </div>
+    <div class="header">
+        <h3><a href="http://stackexchange.com/sites">more stack exchange communities</a></h3>
+        <a href="http://blog.stackoverflow.com/" class="fr">company blog</a>
+    </div>
+    <div class="modal-content">
+            <div class="child-content"></div>
+    </div>
+</div>
+        </div>
+
+        <div class="network-items">
+
+            <a href="http://stackexchange.com/" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 156 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+
+    <a href="#" class="topbar-icon icon-inbox yes-hover js-inbox-button" title="Recent inbox messages">
+        <span class="hidden-text">Inbox</span>
+        <span class="unread-count" style="display:none"></span>
+    </a>
+    <a href="#" class="topbar-icon icon-achievements yes-hover js-achievements-button " data-unread-class="" title="Recent achievements: reputation, badges, and privileges earned">
+        <span class="hidden-text">Reputation and Badges</span>
+        <span class="unread-count" style="display:none">
+            
+        </span>
+    </a>
+        </div>
+
+        <div class="topbar-links">
+
+                <div class="links-container">
+                <span class="topbar-menu-links">
+                                    <a href="https://stackoverflow.com/users/signup?ssrc=head&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f4915990%2fset-todays-date-as-default-date-in-jquery-ui-datepicker" class="login-link">sign up</a>
+                                <a href="https://stackoverflow.com/users/login?ssrc=head&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f4915990%2fset-todays-date-as-default-date-in-jquery-ui-datepicker" class="login-link">log in</a>
+
+                        <a href="http://stackoverflow.com/tour">tour</a>
+                            <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="http://stackoverflow.com/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="http://stackoverflow.com/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="http://meta.stackoverflow.com/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="http://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })">
+                        About Us
+                        <span class="item-summary">
+                            Learn more about Stack Overflow the company
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://business.stackoverflow.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })">
+                        Business
+                        <span class="item-summary">
+                            Learn more about hiring developers or posting ads with us
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+                    </span>
+                </div>
+
+            <div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" placeholder="Search Q&amp;A" tabindex="1" autocomplete="off" maxlength="240" type="text">
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script>
+
+    <div class="container">
+        <div id="header">
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="http://stackoverflow.com/">
+                    Stack Overflow
+                </a>
+            </div>
+            <div id="hmenus">
+                <div class="nav mainnavs">
+                    <ul>
+                        <li class="youarehere"><a id="nav-questions" href="http://stackoverflow.com/questions">Questions</a></li>
+                            <li><a id="nav-jobs" href="http://stackoverflow.com/jobs">Jobs</a></li>
+                        <li><a id="nav-tags" href="http://stackoverflow.com/tags">Tags</a></li>
+                        <li><a id="nav-users" href="http://stackoverflow.com/users">Users</a></li>
+                        <li><a id="nav-badges" href="http://stackoverflow.com/help/badges">Badges</a></li>
+                                            </ul>
+                </div>
+                <div class="nav askquestion">
+                    <ul>
+                        <li>
+                            <a id="nav-askquestion" href="http://stackoverflow.com/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <div id="content" class="snippet-hidden">
+            
+
+<div itemscope="" itemtype="http://schema.org/Question">
+    <link itemprop="image" href="http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+
+<div id="herobox">
+    <div id="hero-content">
+            <div id="close"><a title="click to minimize">_</a></div>
+        <div id="blurb">
+            Stack Overflow is a community of 4.7 million programmers, just like you, helping each other.
+            <br>
+                <br>Join them; it only takes a minute:<br>
+            <br>
+            <a href="http://stackoverflow.com/users/signup?ssrc=hero&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f4915990%2fset-todays-date-as-default-date-in-jquery-ui-datepicker" id="tell-me-more" class="button">Sign up</a>
+        </div>
+        <div id="desc">
+            <b>Join the Stack Overflow community to:</b>
+            <ol id="hiw">
+                <li id="q">Ask programming questions
+                </li>
+                <li id="an">Answer and help your peers
+                </li>
+                <li id="b">Get recognized for your expertise
+                </li>
+            </ol>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    <script>
+        StackExchange.ready(function () {
+
+            var location = 0;
+            if ($("body").hasClass("questions-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("question-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("faq-page")) {
+                location = 5;;
+            } else if ($("body").hasClass("home-page")) {
+                location = 3;;
+            }
+
+            $('#tell-me-more').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+                });
+            });
+            $('#herobox #close').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+                });
+                $.cookie("hero", "mini", { path: "/", expires: 365 });
+                $.ajax({
+                    url: "/hero-mini",
+                    success: function (data) {
+                        $("#herobox").fadeOut("fast", function () {
+                            $("#herobox").replaceWith(data);
+                            $("#herobox-mini").fadeIn("fast");
+                        });
+                    }
+                });
+                return false;
+            });
+        });
+
+    </script>
+</div>
+			<div id="question-header">
+                <h1 itemprop="name"><a href="http://stackoverflow.com/questions/4915990/set-todays-date-as-default-date-in-jquery-ui-datepicker" class="question-hyperlink">Set today's date as default date in jQuery UI datepicker</a></h1>
+		</div>
+			<div id="mainbar">
+
+			
+
+<div class="question" data-questionid="4915990" id="question">
+
+    <div class="everyonelovesstackoverflow clc-cp-lb clc-cp-benefits clc-cp-iress" id="careers1"><div class="clc-cp-lb-header" style="background-image: url(//i.stack.imgur.com/h4C8fm.jpg);" target="_blank"><div class="clc-cp-lb-logo"><img src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/21NSS.jpg" alt="IRESS"></div></div><div class="clc-cp-lb-body"><div class="clc-cp-lb-location">Singapore</div><div class="clc-cp-lb-body-hdr">Work at <span>IRESS</span></div><ul class="clc-cp-lb-benefits"><li class="clc-cp-lb-benefit"><i class="smiley"></i><span>Flexible working environment with tea, coffee and fresh fruit provided</span></li><li class="clc-cp-lb-benefit"><i class="star"></i><span>Learning and Development opportunities</span></li><li class="clc-cp-lb-benefit"><i class="money"></i><span>A competitive remuneration package</span></li></ul></div><a class="clc-cp-link" href="http://stackoverflow.com/company/iress" data-at="1" data-tz="4" data-ti="1249" target="_blank"></a><img class="impression" src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/soi_002.gif" style="display:none;"></div>    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input name="_id_" value="4915990" type="hidden">
+        <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">29</span>
+        <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+
+        <a class="star-off" href="#">favorite</a>
+        <div class="favoritecount"><b>8</b></div>
+
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+<p>I just want today's date  to be the default value in the input that is using jQuery UI's <code>datepicker</code>:</p>
+
+<pre style="" class="default prettyprint prettyprinted"><code><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"mydate"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="tag">/&gt;</span></code></pre>
+
+<p>I tried the below code but it didn't work:</p>
+
+<pre style="" class="default prettyprint prettyprinted"><code><span class="kwd">var</span><span class="pln"> currentDate </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Date</span><span class="pun">();</span><span class="pln">  
+$</span><span class="pun">(</span><span class="str">"#mydate"</span><span class="pun">).</span><span class="pln">datepicker</span><span class="pun">(</span><span class="str">"setDate"</span><span class="pun">,</span><span class="pln">currentDate</span><span class="pun">);</span></code></pre>
+    </div>
+    <div class="post-taglist">
+        <a href="http://stackoverflow.com/questions/tagged/jquery" class="post-tag js-gps-track" title="show questions tagged 'jquery'" rel="tag">jquery</a> <a href="http://stackoverflow.com/questions/tagged/jquery-ui" class="post-tag js-gps-track" title="show questions tagged 'jquery-ui'" rel="tag">jquery-ui</a> <a href="http://stackoverflow.com/questions/tagged/jquery-ui-datepicker" class="post-tag js-gps-track" title="show questions tagged 'jquery-ui-datepicker'" rel="tag">jquery-ui-datepicker</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/q/4915990" title="short permalink to this question" class="short-link" id="link-post-4915990">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/4915990/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </td>
+    <td class="post-signature" align="right">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/4915990/revisions" title="show all edits to this post">edited <span title="2016-04-09 06:54:13Z" class="relativetime">Apr 9 at 6:54</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/2333214/t-j"><div class="gravatar-wrapper-32"><img src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/dIHez.png" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/2333214/t-j">T J</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 22,603" dir="ltr">22.6k</span><span title="7 gold badges"><span class="badge1"></span><span class="badgecount">7</span></span><span title="29 silver badges"><span class="badge2"></span><span class="badgecount">29</span></span><span title="61 bronze badges"><span class="badge3"></span><span class="badgecount">61</span></span>
+        </div>
+    </div>
+</div>    </td>
+    <td class="post-signature owner">
+        <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2011-02-06 20:47:46Z" class="relativetime">Feb 6 '11 at 20:47</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/586131/chris-abrams"><div class="gravatar-wrapper-32"><img src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/c43bfdf0dc55555135220098fa786d8b.jpg" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/586131/chris-abrams">Chris Abrams</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">5,228</span><span title="11 gold badges"><span class="badge1"></span><span class="badgecount">11</span></span><span title="36 silver badges"><span class="badge2"></span><span class="badgecount">36</span></span><span title="49 bronze badges"><span class="badge3"></span><span class="badgecount">49</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+                
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-4915990" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-4915990" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a>
+        </div>         
+    </td>
+</tr>        </tbody></table>
+</div>
+
+			<div id="answers">
+
+				<a name="tab-top"></a>
+				<div id="answers-header">
+					<div class="subheader answers-subheader">
+						<h2>
+								11 Answers
+                                <span style="display:none;" itemprop="answerCount">11</span>
+						</h2>
+						<div>
+							<div id="tabs">
+        <a href="http://stackoverflow.com/questions/4915990/set-todays-date-as-default-date-in-jquery-ui-datepicker?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active">
+            active</a>
+        <a href="http://stackoverflow.com/questions/4915990/set-todays-date-as-default-date-in-jquery-ui-datepicker?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest">
+            oldest</a>
+        <a class="youarehere" href="http://stackoverflow.com/questions/4915990/set-todays-date-as-default-date-in-jquery-ui-datepicker?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes">
+            votes</a>
+</div>
+						</div>
+					</div>    
+				</div>    
+
+
+
+
+  
+<a name="17492468"></a>
+<div id="answer-17492468" class="answer" data-answerid="17492468" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input name="_id_" value="17492468" type="hidden">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">40</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>You need to make the call to setDate separately from the 
+initialization call. So to create the datepicker and set the date in one
+ go:</p>
+
+<pre style="" class="default prettyprint prettyprinted"><code><span class="pln">$</span><span class="pun">(</span><span class="str">"#mydate"</span><span class="pun">).</span><span class="pln">datepicker</span><span class="pun">().</span><span class="pln">datepicker</span><span class="pun">(</span><span class="str">"setDate"</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Date</span><span class="pun">());</span></code></pre>
+
+<p>Why it is like this I do not know. If anyone did, that would be interesting information.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/17492468" title="short permalink to this answer" class="short-link" id="link-post-17492468">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/17492468/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td class="post-signature" align="right">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/17492468/revisions" title="show all edits to this post">edited <span title="2014-04-24 13:10:34Z" class="relativetime">Apr 24 '14 at 13:10</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td class="post-signature" align="right">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2013-07-05 15:35:13Z" class="relativetime">Jul 5 '13 at 15:35</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/777939/martin-eden"><div class="gravatar-wrapper-32"><img src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/4f399c0b34a287ad4c5ae184f2335488.png" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/777939/martin-eden">Martin Eden</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">2,642</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="15 silver badges"><span class="badge2"></span><span class="badgecount">15</span></span><span title="24 bronze badges"><span class="badge3"></span><span class="badgecount">24</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-17492468" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-17492468" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+<div class="everyonelovesstackoverflow clc-cp-lb clc-cp-jobs clc-cp-iress" id="careers3"><div class="clc-cp-lb-header" style="background-image: url(//i.stack.imgur.com/h4C8fm.jpg);" target="_blank"><div class="clc-cp-lb-logo"><img src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/21NSS.jpg" alt="IRESS"></div></div><div class="clc-cp-lb-body"><div class="clc-cp-lb-location">Singapore</div><div class="clc-cp-lb-body-hdr">Work at <span>IRESS</span></div><ul class="clc-cp-lb-jobs"><li><div class="clc-cp-job-title">Senior Python Developer - Enterprise Product Development</div><div class="clc-cp-job-location"></div><span class="clc-cp-tag">python</span><span class="clc-cp-tag">javascript</span></li><li><div class="clc-cp-job-title">Senior Front End Web Developer - JavaScript</div><div class="clc-cp-job-location"></div><span class="clc-cp-tag">javascript</span><span class="clc-cp-tag">jquery</span></li></ul></div><a class="clc-cp-link" href="http://stackoverflow.com/company/iress#jobs" data-at="1" data-tz="4" data-ti="1249" target="_blank"></a><img class="impression" src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/soi_003.gif" style="display:none;"></div>
+  
+<a name="26894822"></a>
+<div id="answer-26894822" class="answer" data-answerid="26894822" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input name="_id_" value="26894822" type="hidden">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">20</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+<div class="bounty-award-container"><span class="bounty-award" title="This answer has been awarded bounties worth 300 reputation by Revious and Jarrod Roberson">+300</span></div>
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>You have to initialize the <a href="http://jqueryui.com/datepicker/" rel="nofollow">datepicker</a> before calling a <a href="http://api.jqueryui.com/1.8/datepicker/" rel="nofollow">datepicker</a> <a href="http://api.jqueryui.com/1.8/datepicker/#methods" rel="nofollow">method</a></p>
+
+<p>Here is a </p>
+
+<h2><a href="http://jsfiddle.net/tilwinjoy/f2md3zy5/1/" rel="nofollow">Working JSFiddle</a>.</h2>
+
+<hr>
+
+<p></p><div class="snippet" data-lang="js" data-hide="false">
+<div class="snippet-code">
+<pre style="" class="snippet-code-js lang-js prettyprint prettyprinted"><code><span class="pln">$</span><span class="pun">(</span><span class="str">"#mydate"</span><span class="pun">).</span><span class="pln">datepicker</span><span class="pun">().</span><span class="pln">datepicker</span><span class="pun">(</span><span class="str">"setDate"</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Date</span><span class="pun">());</span><span class="pln">
+</span><span class="com">//-initialization--^          ^-- method invokation</span></code></pre>
+<pre style="" class="snippet-code-html lang-html prettyprint prettyprinted"><code><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css"</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="atv">"stylesheet"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+</span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+</span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"http://code.jquery.com/ui/1.9.2/jquery-ui.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+</span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"mydate"</span><span class="pln"> </span><span class="tag">/&gt;</span></code></pre>
+<div class="snippet-result" style="width: 100%; border: 1px solid #AAAAAA;"><div style="width: 100%; margin: 0 5px;"><input value="► Run code snippet" style="margin: 1em 0 1em 0.5em; float: none;" type="button"><input class="copySnippet" value="Copy snippet to answer" style="margin: 1em 0px 1em 0.5em; float: none; display: none;" type="button"><input class="hideResults" value="Hide results" style="margin: 1em 0px 1em 0.5em; float: none; display: none;" type="button"></div><div style="position: relative; width: 100%; height: 200px; border-top: 1px solid rgb(170, 170, 170); display: none;"><iframe name="de1b219d-6218-0f5b-b8e7-e90dd4f2e8a5" sandbox="allow-modals allow-scripts" class="snippet-box-edit" frameborder="0"></iframe></div></div></div>
+</div>
+<p></p>
+
+<hr>
+
+<p><sub> P.S: This assumes that you have the correct date set in your computer </sub></p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/26894822" title="short permalink to this answer" class="short-link" id="link-post-26894822">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/26894822/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td class="post-signature" align="right">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/26894822/revisions" title="show all edits to this post">edited <span title="2016-04-09 06:59:14Z" class="relativetime">Apr 9 at 6:59</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td class="post-signature" align="right">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2014-11-12 19:19:24Z" class="relativetime">Nov 12 '14 at 19:19</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/2333214/t-j"><div class="gravatar-wrapper-32"><img src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/dIHez.png" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/2333214/t-j">T J</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 22,603" dir="ltr">22.6k</span><span title="7 gold badges"><span class="badge1"></span><span class="badgecount">7</span></span><span title="29 silver badges"><span class="badge2"></span><span class="badgecount">29</span></span><span title="61 bronze badges"><span class="badge3"></span><span class="badgecount">61</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-26894822" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-42347377" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Thanks! you could also add to
+ your example datepicker("selectedDate", new Date()); which is selecting
+ the date only when the OP opens the calendar.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/196210/revious" title="1,587 reputation" class="comment-user">Revious</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment42347377_26894822"><span title="2014-11-12 21:39:29Z" class="relativetime-clean">Nov 12 '14 at 21:39</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-42450738" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@Revious Actually, I couldn't find any reference to such method... There's also <a href="http://api.jqueryui.com/datepicker/#option-defaultDate" rel="nofollow"><code>defaultDate</code></a>, but it won't set the date inside the textbox which is being asked in question...</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/2333214/t-j" title="22,603 reputation" class="comment-user">T J</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment42450738_26894822"><span title="2014-11-16 09:36:44Z" class="relativetime-clean">Nov 16 '14 at 9:36</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-58690398" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of 'useful comment' votes received" class="cool">3</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy"><i>The accepted answer doesn't work</i>, well, that is not even an <b>answer</b></span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/2025923/tushar" title="49,699 reputation" class="comment-user">Tushar</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment58690398_26894822"><span title="2016-02-19 07:10:49Z" class="relativetime-clean">Feb 19 at 7:10</span></a></span>
+                    <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-26894822" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="22473987"></a>
+<div id="answer-22473987" class="answer" data-answerid="22473987" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input name="_id_" value="22473987" type="hidden">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">6</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Its very simple you just add this script,</p>
+
+<pre style="" class="default prettyprint prettyprinted"><code><span class="pln">$</span><span class="pun">(</span><span class="str">"#mydate"</span><span class="pun">).</span><span class="pln">datepicker</span><span class="pun">({</span><span class="pln"> dateFormat</span><span class="pun">:</span><span class="pln"> </span><span class="str">"yy-mm-dd"</span><span class="pun">}).</span><span class="pln">datepicker</span><span class="pun">(</span><span class="str">"setDate"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"0"</span><span class="pun">);</span></code></pre>
+
+<p>Here, setDate set today date &amp; dateFormat define which format you want set or show.</p>
+
+<p>Hope its simple script work..</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/22473987" title="short permalink to this answer" class="short-link" id="link-post-22473987">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/22473987/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td class="post-signature" align="right">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2014-03-18 08:32:16Z" class="relativetime">Mar 18 '14 at 8:32</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/2556170/rjony"><div class="gravatar-wrapper-32"><img src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/fba84213524b67e2770724c670c7662b.png" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/2556170/rjony">rjony</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">61</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-22473987" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-22473987" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="18691468"></a>
+<div id="answer-18691468" class="answer" data-answerid="18691468" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input name="_id_" value="18691468" type="hidden">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">4</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<pre style="" class="default prettyprint prettyprinted"><code><span class="pln">$</span><span class="pun">(</span><span class="str">"#date"</span><span class="pun">).</span><span class="pln">datepicker</span><span class="pun">.</span><span class="pln">regional</span><span class="pun">[</span><span class="str">""</span><span class="pun">].</span><span class="pln">dateFormat </span><span class="pun">=</span><span class="pln"> </span><span class="str">'dd/mm/yy'</span><span class="pun">;</span><span class="pln">
+$</span><span class="pun">(</span><span class="str">"#date"</span><span class="pun">).</span><span class="pln">datepicker</span><span class="pun">(</span><span class="str">"setDate"</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Date</span><span class="pun">());</span></code></pre>
+
+<p>Always work for me </p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/18691468" title="short permalink to this answer" class="short-link" id="link-post-18691468">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/18691468/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td class="post-signature" align="right">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2013-09-09 04:26:47Z" class="relativetime">Sep 9 '13 at 4:26</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1983611/ashisha-nautiyal"><div class="gravatar-wrapper-32"><img src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/RL8N2.jpg" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1983611/ashisha-nautiyal">Ashisha Nautiyal</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">955</span><span title="8 silver badges"><span class="badge2"></span><span class="badgecount">8</span></span><span title="23 bronze badges"><span class="badge3"></span><span class="badgecount">23</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-18691468" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-18691468" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="17633442"></a>
+<div id="answer-17633442" class="answer" data-answerid="17633442" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input name="_id_" value="17633442" type="hidden">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">1</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>This one work for me , first you bind datepicker to text-box and in next line set (today as default date) the date to it  </p>
+
+<pre style="" class="default prettyprint prettyprinted"><code><span class="pln">$</span><span class="pun">(</span><span class="str">"#date"</span><span class="pun">).</span><span class="pln">datepicker</span><span class="pun">();</span><span class="pln">
+
+$</span><span class="pun">(</span><span class="str">"#date"</span><span class="pun">).</span><span class="pln">datepicker</span><span class="pun">(</span><span class="str">"setDate"</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Date</span><span class="pun">());</span></code></pre>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/17633442" title="short permalink to this answer" class="short-link" id="link-post-17633442">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/17633442/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td class="post-signature" align="right">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/17633442/revisions" title="show all edits to this post">edited <span title="2013-09-09 04:14:13Z" class="relativetime">Sep 9 '13 at 4:14</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1562548/chintan-khetiya"><div class="gravatar-wrapper-32"><img src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/5aHBJ.jpg" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1562548/chintan-khetiya">chintan khetiya</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">8,529</span><span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span><span title="28 silver badges"><span class="badge2"></span><span class="badgecount">28</span></span><span title="66 bronze badges"><span class="badge3"></span><span class="badgecount">66</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td class="post-signature" align="right">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2013-07-13 19:20:38Z" class="relativetime">Jul 13 '13 at 19:20</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1728403/usman-y"><div class="gravatar-wrapper-32"><img src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/I6ZSz.jpg" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1728403/usman-y">Usman Y</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">395</span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="11 bronze badges"><span class="badge3"></span><span class="badgecount">11</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-17633442" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-17633442" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="23251748"></a>
+<div id="answer-23251748" class="answer" data-answerid="23251748" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input name="_id_" value="23251748" type="hidden">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">1</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Note: When you pass setDate, you are calling a method which assumes the datepicker has already been initialized on that object.</p>
+
+<p></p>
+
+<pre style="" class="default prettyprint prettyprinted"><code><span class="pln">$</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">    
+   $</span><span class="pun">(</span><span class="str">'#date'</span><span class="pun">).</span><span class="pln">datepicker</span><span class="pun">();</span><span class="pln">
+   $</span><span class="pun">(</span><span class="str">'#date'</span><span class="pun">).</span><span class="pln">datepicker</span><span class="pun">(</span><span class="str">'setDate'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'04/23/2014'</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">});</span></code></pre>
+
+<p>Test: <a href="http://jsfiddle.net/wimarbueno/hQkec/1/" rel="nofollow">http://jsfiddle.net/wimarbueno/hQkec/1/</a></p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/23251748" title="short permalink to this answer" class="short-link" id="link-post-23251748">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/23251748/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td class="post-signature" align="right">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2014-04-23 17:52:55Z" class="relativetime">Apr 23 '14 at 17:52</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/2697809/wimarbueno"><div class="gravatar-wrapper-32"><img src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/437180da826466aa01b82541d1f0c6e2.png" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/2697809/wimarbueno">wimarbueno</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">21</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-23251748" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-23251748" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="25649319"></a>
+<div id="answer-25649319" class="answer" data-answerid="25649319" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input name="_id_" value="25649319" type="hidden">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">1</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Set default date in initialization:</p>
+
+<pre style="" class="default prettyprint prettyprinted"><code><span class="pln">$</span><span class="pun">(</span><span class="str">"#date"</span><span class="pun">).</span><span class="pln">datepicker</span><span class="pun">({</span><span class="pln">
+    defaultDate</span><span class="pun">:</span><span class="pln"> </span><span class="str">'01/26/2014'</span><span class="pln">
+</span><span class="pun">});</span></code></pre>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/25649319" title="short permalink to this answer" class="short-link" id="link-post-25649319">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/25649319/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td class="post-signature" align="right">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2014-09-03 16:27:25Z" class="relativetime">Sep 3 '14 at 16:27</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/860488/morten-holmgaard"><div class="gravatar-wrapper-32"><img src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/33cda947b1847d58e3b2bdc037aa8bc8.jpg" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/860488/morten-holmgaard">Morten Holmgaard</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">2,019</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="23 silver badges"><span class="badge2"></span><span class="badgecount">23</span></span><span title="46 bronze badges"><span class="badge3"></span><span class="badgecount">46</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-25649319" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-25649319" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="25049901"></a>
+<div id="answer-25049901" class="answer" data-answerid="25049901" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input name="_id_" value="25049901" type="hidden">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>This worked for me and also localised it:</p>
+
+<pre style="" class="default prettyprint prettyprinted"><code><span class="pln">$</span><span class="pun">.</span><span class="pln">datepicker</span><span class="pun">.</span><span class="pln">setDefaults</span><span class="pun">(</span><span class="pln"> $</span><span class="pun">.</span><span class="pln">datepicker</span><span class="pun">.</span><span class="pln">regional</span><span class="pun">[</span><span class="pln"> </span><span class="str">"fr"</span><span class="pln"> </span><span class="pun">]</span><span class="pln"> </span><span class="pun">);</span><span class="pln">
+$</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   $</span><span class="pun">(</span><span class="pln"> </span><span class="str">"#txtDespatchDate"</span><span class="pln"> </span><span class="pun">).</span><span class="pln">datepicker</span><span class="pun">(</span><span class="pln"> </span><span class="pun">);</span><span class="pln">
+   $</span><span class="pun">(</span><span class="pln"> </span><span class="str">"#txtDespatchDate"</span><span class="pln"> </span><span class="pun">).</span><span class="pln">datepicker</span><span class="pun">(</span><span class="pln"> </span><span class="str">"option"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"dateFormat"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"dd/mm/yy"</span><span class="pln"> </span><span class="pun">);</span><span class="pln">
+   $</span><span class="pun">(</span><span class="str">'#txtDespatchDate'</span><span class="pun">).</span><span class="pln">datepicker</span><span class="pun">(</span><span class="str">'setDate'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Date</span><span class="pun">());</span><span class="pln">
+</span><span class="pun">});</span></code></pre>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/25049901" title="short permalink to this answer" class="short-link" id="link-post-25049901">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/25049901/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td class="post-signature" align="right">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/25049901/revisions" title="show all edits to this post">edited <span title="2014-11-12 18:26:01Z" class="relativetime">Nov 12 '14 at 18:26</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/2333214/t-j"><div class="gravatar-wrapper-32"><img src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/dIHez.png" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/2333214/t-j">T J</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 22,603" dir="ltr">22.6k</span><span title="7 gold badges"><span class="badge1"></span><span class="badgecount">7</span></span><span title="29 silver badges"><span class="badge2"></span><span class="badgecount">29</span></span><span title="61 bronze badges"><span class="badge3"></span><span class="badgecount">61</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td class="post-signature" align="right">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2014-07-31 02:28:04Z" class="relativetime">Jul 31 '14 at 2:28</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/3354184/jan"><div class="gravatar-wrapper-32"><img src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/3e64ace1632b0600ba73432e6999df1e.png" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/3354184/jan">Jan</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">11</span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-25049901" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-25049901" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="13049970"></a>
+<div id="answer-13049970" class="answer" data-answerid="13049970" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input name="_id_" value="13049970" type="hidden">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>You have not defined</p>
+
+<pre style="" class="default prettyprint prettyprinted"><code><span class="pln">$</span><span class="pun">(</span><span class="str">"#mydate"</span><span class="pun">).</span><span class="pln">datepicker</span><span class="pun">({});</span></code></pre>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/13049970" title="short permalink to this answer" class="short-link" id="link-post-13049970">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/13049970/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td class="post-signature" align="right">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/13049970/revisions" title="show all edits to this post">edited <span title="2016-04-09 07:01:49Z" class="relativetime">Apr 9 at 7:01</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/2333214/t-j"><div class="gravatar-wrapper-32"><img src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/dIHez.png" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/2333214/t-j">T J</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 22,603" dir="ltr">22.6k</span><span title="7 gold badges"><span class="badge1"></span><span class="badgecount">7</span></span><span title="29 silver badges"><span class="badge2"></span><span class="badgecount">29</span></span><span title="61 bronze badges"><span class="badge3"></span><span class="badgecount">61</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td class="post-signature" align="right">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2012-10-24 13:12:27Z" class="relativetime">Oct 24 '12 at 13:12</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1653919/ashish-mehta"><div class="gravatar-wrapper-32"><img src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/hQeno.jpg" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1653919/ashish-mehta">Ashish Mehta</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">1,072</span><span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span><span title="10 silver badges"><span class="badge2"></span><span class="badgecount">10</span></span><span title="31 bronze badges"><span class="badge3"></span><span class="badgecount">31</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-13049970" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-13049970" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="24901184"></a>
+<div id="answer-24901184" class="answer" data-answerid="24901184" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input name="_id_" value="24901184" type="hidden">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">-2</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>try this:</p>
+
+<pre style="" class="default prettyprint prettyprinted"><code><span class="pln">$</span><span class="pun">(</span><span class="str">"#mydate"</span><span class="pun">).</span><span class="pln">datepicker</span><span class="pun">(</span><span class="str">"setDate"</span><span class="pun">,</span><span class="str">'1d'</span><span class="pun">);</span></code></pre>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/24901184" title="short permalink to this answer" class="short-link" id="link-post-24901184">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/24901184/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td class="post-signature" align="right">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2014-07-23 03:08:13Z" class="relativetime">Jul 23 '14 at 3:08</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1952175/lin-mo"><div class="gravatar-wrapper-32"><img src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/yrPhV.jpg" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1952175/lin-mo">Lin Mo</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">1</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-24901184" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-38684441" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">What's <code>1d</code> supposed to be?</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/3155705/jw-lim" title="1,112 reputation" class="comment-user">JW Lim</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment38684441_24901184"><span title="2014-07-23 03:15:33Z" class="relativetime-clean">Jul 23 '14 at 3:15</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-39116492" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">sorry for the late reply, <code>1d</code> means <code>today</code>.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1952175/lin-mo" title="1 reputation" class="comment-user">Lin Mo</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment39116492_24901184"><span title="2014-08-05 04:26:22Z" class="relativetime-clean">Aug 5 '14 at 4:26</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-24901184" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="35594374"></a>
+<div id="answer-35594374" class="answer" data-answerid="35594374" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input name="_id_" value="35594374" type="hidden">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">-2</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<pre style="" class="default prettyprint prettyprinted"><code><span class="pln">ticketViewModel</span><span class="pun">.</span><span class="typ">CreatedDate</span><span class="pln"> </span><span class="pun">=</span><span class="typ">Convert</span><span class="pun">.</span><span class="typ">ToDateTime</span><span class="pun">(</span><span class="typ">DateTime</span><span class="pun">.</span><span class="typ">Now</span><span class="pun">.</span><span class="typ">ToShortTimeString</span><span class="pun">());</span></code></pre>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/35594374" title="short permalink to this answer" class="short-link" id="link-post-35594374">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/35594374/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td class="post-signature" align="right">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/35594374/revisions" title="show all edits to this post">edited <span title="2016-04-09 22:56:51Z" class="relativetime">Apr 9 at 22:56</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/128421/the-tin-man"><div class="gravatar-wrapper-32"><img src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/71770d043c0f7e3c7bc5f74190015c26.png" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/128421/the-tin-man">the Tin Man</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 102,253" dir="ltr">102k</span><span title="21 gold badges"><span class="badge1"></span><span class="badgecount">21</span></span><span title="126 silver badges"><span class="badge2"></span><span class="badgecount">126</span></span><span title="191 bronze badges"><span class="badge3"></span><span class="badgecount">191</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td class="post-signature" align="right">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2016-02-24 05:58:54Z" class="relativetime">Feb 24 at 5:58</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/5972570/shivanand"><div class="gravatar-wrapper-32"><img src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/d06f263e0e0e24898abb6aaca86e4cd9.png" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/5972570/shivanand">shivanand</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-35594374" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-60633349" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of 'useful comment' votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Hi, what is <code>ticketViewModel</code>? How does this answer the question about jquery ui date picker..?</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/2333214/t-j" title="22,603 reputation" class="comment-user">T J</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment60633349_35594374"><span title="2016-04-09 07:00:26Z" class="relativetime-clean">Apr 9 at 7:00</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-60650767" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">This does not provide an answer to the question. Once you have sufficient <a href="http://stackoverflow.com/help/whats-reputation">reputation</a> you will be able to <a href="http://stackoverflow.com/help/privileges/comment">comment on any post</a>; instead, <a href="http://meta.stackexchange.com/questions/214173/why-do-i-need-50-reputation-to-comment-what-can-i-do-instead">provide answers that don't require clarification from the asker</a>. - <a href="http://stackoverflow.com/review/low-quality-posts/11952105">From Review</a></span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/369450/cpburnz" title="6,164 reputation" class="comment-user">cpburnz</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment60650767_35594374"><span title="2016-04-09 21:35:21Z" class="relativetime-clean">Apr 9 at 21:35</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-60652174" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Code only answers (especially
+ ones that are not formatted) don't really help. Instead, in addition to
+ the code, add the reason the code is useful. You want to educate so the
+ person asking learns and knows how to avoid the problem in the future.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/128421/the-tin-man" title="102,253 reputation" class="comment-user">the Tin Man</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment60652174_35594374"><span title="2016-04-09 22:56:25Z" class="relativetime-clean">Apr 9 at 22:56</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-35594374" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+									<a name="new-answer"></a>
+						<form id="post-form" action="/questions/4915990/answer/submit" method="post" class="post-form">
+						    <input id="post-id" value="4915990" type="hidden">
+                            <input id="qualityBanWarningShown" name="qualityBanWarningShown" value="false" type="hidden">
+                            <input name="referrer" value="https://www.google.co.in" type="hidden">
+							<h2 class="space">Your Answer</h2>
+
+
+            <script>
+            StackExchange.ifUsing("editor", function () {
+                StackExchange.using("externalEditor", function () {
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.init();
+                    });
+                });
+            }, "code-snippets");
+        </script>
+    
+
+<script>
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+       
+        StackExchange.using("externalEditor", function() {
+                // Have to fire editor after snippets, if snippets enabled
+                if (StackExchange.options.snippets.enabled) {
+                    StackExchange.using("snippets", function() {
+                        createEditor();
+                    });
+                }
+                else {
+                    createEditor();
+                }
+            });
+
+            function createEditor() {
+                prepareEditor({
+                    heartbeatType: 'answer',
+                convertImagesToLinks: true,
+                reputationToPostImages: 10,
+                bindNavPrevention: true,
+                postfix: "",
+                    onDemand: true,
+                    discardSelector: ".discard-answer"
+                    ,immediatelyShowMarkdownHelp:true
+                    });
+                
+
+        }
+    });  
+</script>
+
+
+<div id="post-editor" class="post-editor js-post-editor">
+
+    <div style="position: relative;">     
+        <div class="wmd-container">
+            <div id="wmd-button-bar" class="wmd-button-bar"><ul id="wmd-button-row" class="wmd-button-row"><li style="left: 0px;" class="wmd-button" id="wmd-bold-button"><span style="background-position: 0px -20px;"></span></li><li style="left: 25px;" class="wmd-button" id="wmd-italic-button"><span style="background-position: -20px -20px;"></span></li><li style="left: 50px;" class="wmd-spacer" id="wmd-spacer1"><span style="background-position: -40px -20px;"></span></li><li style="left: 75px;" class="wmd-button" id="wmd-link-button"><span style="background-position: -40px -20px;"></span></li><li style="left: 100px;" class="wmd-button" id="wmd-quote-button"><span style="background-position: -60px -20px;"></span></li><li style="left: 125px;" class="wmd-button" id="wmd-code-button"><span style="background-position: -80px -20px;"></span></li><li style="left: 150px;" class="wmd-button" id="wmd-image-button"><span style="background-position: -100px -20px;"></span></li><li style="left: 175px;" class="wmd-spacer" id="wmd-spacer2"><span style="background-position: -120px -20px;"></span></li><li style="left: 200px;" class="wmd-button" id="wmd-olist-button"><span style="background-position: -120px -20px;"></span></li><li style="left: 225px;" class="wmd-button" id="wmd-ulist-button"><span style="background-position: -140px -20px;"></span></li><li style="left: 250px;" class="wmd-button" id="wmd-heading-button"><span style="background-position: -160px -20px;"></span></li><li style="left: 275px;" class="wmd-button" id="wmd-hr-button"><span style="background-position: -180px -20px;"></span></li><li style="left: 300px;" class="wmd-spacer" id="wmd-spacer3"><span style="background-position: -200px -20px;"></span></li><li style="left: 325px;" class="wmd-button" id="wmd-undo-button"><span style="background-position: -200px -20px;"></span></li><li style="left: 350px;" class="wmd-button" id="wmd-redo-button"><span style="background-position: -220px -20px;"></span></li></ul></div>
+            <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+        </div>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" value="2e31b00793212811d9ab2dd4948c1e07" type="hidden">
+        <input id="author" name="author" type="text">
+    </div>
+
+
+
+</div>
+							<div style="position: relative;">
+								
+								            <div class="form-item new-post-login">
+        
+                <div class="new-login-form">
+                    <div class="new-login-left">
+                        <h3>Sign up or <a id="login-link" href="http://stackoverflow.com/users/login?ssrc=question_page&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f4915990%2fset-todays-date-as-default-date-in-jquery-ui-datepicker%23new-answer">log in</a></h3>
+                        <script>
+                            StackExchange.ready(function () {
+                                StackExchange.helpers.onClickDraftSave('#login-link');
+                            });
+                        </script>
+                        <div class="preferred-login google-login">
+                            <p><span class="icon"></span><span>Sign up using Google</span></p>
+                        </div>
+                        <div class="preferred-login facebook-login">
+                            <p><span class="icon"></span><span>Sign up using Facebook</span></p>
+                        </div>
+                        <div class="preferred-login stackexchange-login">
+                            <p><span class="icon"></span><span>Sign up using Email and Password</span></p>
+                        </div>
+                    </div>
+                    <input name="manual-openid" class="manual-openid" type="hidden">
+                    <input name="use-facebook" class="use-facebook" value="false" type="hidden">
+                    <input name="use-google" class="use-google" value="false" type="hidden">
+                    <input class="submit-openid" value="Submit" style="display:none" type="button">
+                    <div class="new-login-right">
+                                <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tbody><tr>
+                    <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" size="30" maxlength="30" tabindex="105" type="text">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" size="30" maxlength="100" tabindex="106" placeholder="required, but never shown" type="email">
+                </div>
+            </td>
+        </tr>
+        </tbody></table>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+            <script>
+                StackExchange.ready(
+                    function () {
+                        StackExchange.openid.initPostLogin('.new-post-login', 'http%3a%2f%2fstackoverflow.com%2fquestions%2f4915990%2fset-todays-date-as-default-date-in-jquery-ui-datepicker%23new-answer', 'question_page');
+                    }
+                );
+            </script>
+            <noscript>
+                        <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tr>
+                    <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown" />
+                </div>
+            </td>
+        </tr>
+        </table>
+    </div>
+
+            </noscript>
+
+							</div>
+           
+															<div class="form-submit cbt">
+									<input id="submit-button" value="Post Your Answer" tabindex="110" type="submit">
+									<a href="#" class="btn-clear discard-answer dno">discard</a>
+
+<p class="privacy-policy-agreement">
+By posting your answer, you agree to the <a href="http://stackexchange.com/legal/privacy-policy" target="_blank">privacy policy</a> and <a href="http://stackexchange.com/legal/terms-of-service" target="_blank">terms of service</a>.</p>
+<input name="legalLinksShown" value="1" type="hidden">								</div>
+						</form>
+
+
+
+						<h2 class="bottom-notice" data-loc="1">
+Not the answer you're looking for?							Browse other questions tagged <a href="http://stackoverflow.com/questions/tagged/jquery" class="post-tag" title="show questions tagged 'jquery'" rel="tag">jquery</a> <a href="http://stackoverflow.com/questions/tagged/jquery-ui" class="post-tag" title="show questions tagged 'jquery-ui'" rel="tag">jquery-ui</a> <a href="http://stackoverflow.com/questions/tagged/jquery-ui-datepicker" class="post-tag" title="show questions tagged 'jquery-ui-datepicker'" rel="tag">jquery-ui-datepicker</a>  or <a href="http://stackoverflow.com/questions/ask">ask your own question</a>.						</h2>
+			</div>
+		</div>
+				<div id="sidebar" class="show-votes">
+						    <div class="module question-stats">
+			        <table id="qinfo">
+			            <tbody><tr>
+			                <td>
+			                    <p class="label-key">asked</p>
+			                </td>
+			                <td style="padding-left: 10px">
+			                    <p class="label-key" title="2011-02-06 20:47:46Z"><b>5 years ago</b></p>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <p class="label-key">viewed</p>
+			                </td>
+
+			                <td style="padding-left: 10px">
+			                    <p class="label-key">
+			                        <b>93825 times</b>
+			                    </p>
+			                </td>
+			            </tr>
+			                <tr>
+			                    <td>
+			                        <p class="label-key">active</p>
+			                    </td>
+			                    <td style="padding-left: 10px">
+			                        <p class="label-key"><b><a href="http://stackoverflow.com/questions/4915990/set-todays-date-as-default-date-in-jquery-ui-datepicker?lastactivity" class="lastactivity-link" title="2016-04-09 22:56:51Z">1 month ago</a></b></p>
+			                    </td>
+			                </tr>
+			        </tbody></table>
+			    </div>
+						
+			<div class="everyonelovesstackoverflow" id="careers2">
+        </div>
+        <div class=" clc-cp-sb clc-cp-jobs clc-cp-iress" id="hireme"><div class="clc-cp-sb-header" style="background-image: url(//i.stack.imgur.com/h4C8fm.jpg);" target="_blank"><div class="clc-cp-sb-logo"><img src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/21NSS.jpg" alt="IRESS"></div></div><div class="clc-cp-sb-body"><div class="clc-cp-sb-info"><div class="clc-cp-sb-name">IRESS</div><p class="clc-cp-sb-loc">based in Singapore</p></div><div class="clc-cp-sb-body-hdr">3 open jobs</div><ul class="clc-cp-sb-jobs"><li><div class="clc-cp-job-title">Senior Python Developer - Enterprise Product Development</div><div class="clc-cp-job-location">Sydney, Australia</div><span class="clc-cp-tag">python</span><span class="clc-cp-tag">javascript</span></li><li><div class="clc-cp-job-title">Senior Front End Web Developer - JavaScript</div><div class="clc-cp-job-location">Melbourne, Australia</div><span class="clc-cp-tag">javascript</span><span class="clc-cp-tag">jquery</span></li><li><div class="clc-cp-job-title">Senior C++ Software Engineer</div><div class="clc-cp-job-location">Melbourne, Australia</div><span class="clc-cp-tag">c++</span><span class="clc-cp-tag">visual-c++</span></li></ul></div><div class="clc-cp-sb-button">view company page</div><a class="clc-cp-link" href="http://stackoverflow.com/company/iress#jobs" data-at="1" data-tz="4" data-ti="1249" target="_blank"></a><img class="impression" src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/soi.gif" style="display:none;"></div>
+			  
+    
+            
+
+				<div class="module sidebar-related">
+					<h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/233553?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted large">188
+    </div>
+</a><a href="http://stackoverflow.com/questions/233553/how-do-i-pre-populate-a-jquery-datepicker-textbox-with-todays-date?rq=1" class="question-hyperlink">How do I pre-populate a jQuery Datepicker textbox with today's date?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/662220?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">70
+    </div>
+</a><a href="http://stackoverflow.com/questions/662220/how-to-change-the-pop-up-position-of-the-jquery-datepicker-control?rq=1" class="question-hyperlink">How to change the pop-up position of the jQuery DatePicker control</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/1328025?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted large">327
+    </div>
+</a><a href="http://stackoverflow.com/questions/1328025/jquery-ui-datepicker-change-date-format?rq=1" class="question-hyperlink">jQuery UI DatePicker - Change Date Format</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/2208480?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted large">269
+    </div>
+</a><a href="http://stackoverflow.com/questions/2208480/jquery-ui-datepicker-to-show-month-year-only?rq=1" class="question-hyperlink">jQuery UI DatePicker to show month year only</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/9435086?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">52
+    </div>
+</a><a href="http://stackoverflow.com/questions/9435086/how-do-i-clear-reset-the-selected-dates-on-the-jquery-ui-datepicker-calendar?rq=1" class="question-hyperlink">How do I clear/reset the selected dates on the jQuery UI Datepicker calendar?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/10139378?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">25
+    </div>
+</a><a href="http://stackoverflow.com/questions/10139378/setting-min-date-in-jquery-datepicker?rq=1" class="question-hyperlink">setting min date in jquery datepicker</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/11871399?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">0
+    </div>
+</a><a href="http://stackoverflow.com/questions/11871399/default-date-in-multiple-jquery-datepickers?rq=1" class="question-hyperlink">default date in multiple jquery datepickers</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/12428203?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">1
+    </div>
+</a><a href="http://stackoverflow.com/questions/12428203/get-todays-date-from-jquery-datepicker?rq=1" class="question-hyperlink">Get today's date from jquery datepicker</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/14580749?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">14
+    </div>
+</a><a href="http://stackoverflow.com/questions/14580749/jquery-datepicker-set-default-date?rq=1" class="question-hyperlink">Jquery DatePicker Set default date</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/26914856?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">1
+    </div>
+</a><a href="http://stackoverflow.com/questions/26914856/setting-default-date-on-jquery-datepicker?rq=1" class="question-hyperlink">Setting default date on jQuery datepicker</a>
+</div>
+
+                    </div>
+				</div>
+            
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="http://stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li>
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/309026/how-to-define-an-inner-product-argument-in-latex" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to define an inner product argument in LaTeX
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1780864/why-do-these-equal-logarithms-give-different-answers" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why do these "equal" logarithms give different answers
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/37165952/why-does-date-timedelta-become-date-not-datetime" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why does date + timedelta become date, not datetime?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/80001/how-should-damage-thresholds-be-assigned" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How should damage thresholds be assigned?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/324933/word-to-denote-someone-who-is-easily-dominated-or-insulted-but-is-helpless" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Word to denote someone who is easily dominated or insulted but is helpless
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-dba" title="Database Administrators Stack Exchange"></div><a href="http://dba.stackexchange.com/questions/138206/offset-fetch-overlapping-results-on-second-page" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:182 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    OFFSET ... FETCH overlapping results on second page
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="http://puzzling.stackexchange.com/questions/32402/what-did-i-study" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What did I study?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-money" title="Personal Finance &amp; Money Stack Exchange"></div><a href="http://money.stackexchange.com/questions/63921/is-buying-a-lottery-ticket-considered-an-investment" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:93 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is buying a lottery ticket considered an investment?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-boardgames" title="Board &amp; Card Games Stack Exchange"></div><a href="http://boardgames.stackexchange.com/questions/30051/why-cant-i-play-a-card-for-its-alternative-cost-after-searching-for-it-with-bri" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:147 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why can't I play a card for its alternative cost after searching for it with Bring to Light?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/127656/who-repaints-captain-americas-shield" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Who repaints Captain America's shield?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/122507/tracing-the-location-of-a-mobile-ip-from-an-email" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Tracing the location of a mobile IP from an email
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/776037/why-would-a-hosting-provider-not-allow-ssl-over-port-443" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:2 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why would a hosting provider not allow SSL over port 443?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-movies" title="Movies &amp; TV Stack Exchange"></div><a href="http://movies.stackexchange.com/questions/52854/why-were-only-these-people-punished-in-oathbreaker-and-why-in-this-manner" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:367 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why were only these people punished in "Oathbreaker", and why in this manner?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/282550/how-to-recursively-uncompress-files-in-a-directory-with-tar" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:106 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to recursively uncompress files in a directory with tar?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1780677/special-gamma-function-integral" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Special Gamma function integral
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/41385/is-there-a-more-effective-way-to-build-the-vocabulary-of-a-fictional-language-th" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is there a more effective way to build the vocabulary of a fictional language than a word frequency list?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/128080/find-longest-sequence-of-zeroes-in-a-binary-representation-of-an-integer" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:196 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Find longest sequence of zeroes in a binary representation of an integer
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/37168929/filling-in-values-in-a-data-frame-in-r" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Filling in values in a data frame in R?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/282366/how-to-invoke-vim-editor-and-pipe-output-to-bash" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:106 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to invoke vim editor and pipe output to bash
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/127624/why-was-nick-surprised-at-hermiones-ignorance-of-the-hogwarts-elves" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why was Nick surprised at Hermione's ignorance of the Hogwarts elves?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/127575/in-canon-has-anyone-other-than-hagrid-been-expelled" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    In canon, has anyone other than Hagrid been expelled?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/308600/how-to-include-a-lenny-face-in-a-latex-document-e-g-%cd%a1-%cd%9c%ca%96-%cd%a1" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to include a Lenny face in a LaTeX document? e.g. ( ͡° ͜ʖ ͡°)
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-sqa" title="Software Quality Assurance &amp; Testing Stack Exchange"></div><a href="http://sqa.stackexchange.com/questions/18583/why-do-medium-to-large-companies-not-adopt-test-automation" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:244 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why do medium to large companies not adopt test automation?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-space" title="Space Exploration Stack Exchange"></div><a href="http://space.stackexchange.com/questions/15235/how-do-solar-flares-degrade-orbits" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:508 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How do solar flares degrade orbits?
+                </a>
+
+            </li>
+    </ul>
+
+        
+</div>
+		</div>
+	
+<div id="feed-link">
+    <div id="feed-link-text">
+        <a href="http://stackoverflow.com/feeds/question/4915990" title="feed of this question and its answers">
+            <span class="feed-icon"></span>question feed
+        </a>
+    </div>
+</div>	<script>
+StackExchange.ready(function(){$.get('/posts/4915990/ivc/e85f');});
+</script>
+<noscript>
+    <div><img src="/posts/4915990/ivc/e85f" class="dno" alt="" width="0" height="0"></div>
+</noscript><div style="display:none" id="prettify-lang">default</div></div>
+
+
+        </div>
+    </div><script src="Set%20today%27s%20date%20as%20default%20date%20in%20jQuery%20UI%20datepicker%20-%20Stack%20Overflow_files/p.js" async=""></script>
+    <div id="footer" class="categories">
+        <div class="footerwrap">
+            <div id="footer-menu">
+                <div class="top-footer-links">
+                    <a href="http://stackoverflow.com/company/about">about us</a>
+                        <a href="http://stackoverflow.com/tour">tour</a>
+                    <a href="http://stackoverflow.com/help">help</a>
+                    <a href="http://blog.stackoverflow.com/?blb=1">blog</a>
+                        <a href="http://chat.stackoverflow.com/">chat</a>
+                    <a href="http://data.stackexchange.com/">data</a>
+                    <a href="http://stackexchange.com/legal">legal</a>
+                    <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackoverflow.com/company/work-here">work here</a>
+                    <a href="http://stackexchange.com/mediakit">advertising info</a>
+
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
+                    <b><a href="http://stackoverflow.com/contact">contact us</a></b>
+                        <b><a href="http://meta.stackoverflow.com/">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tbody><tr>
+            <th colspan="3">
+                Technology
+            </th>
+            <th>
+                Life / Arts
+            </th>
+            <th>
+                Culture / Recreation
+            </th>
+            <th>
+                Science
+            </th>
+            <th>
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="http://stackoverflow.com/" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="http://serverfault.com/" title="system and network administrators">Server Fault</a></li>
+                        <li><a href="http://superuser.com/" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="http://webapps.stackexchange.com/" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="http://askubuntu.com/" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="http://webmasters.stackexchange.com/" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="http://gamedev.stackexchange.com/" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="http://tex.stackexchange.com/" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://programmers.stackexchange.com/" title="professional programmers interested in conceptual questions about software development">Programmers</a></li>
+                        <li><a href="http://unix.stackexchange.com/" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li>
+                        <li><a href="http://apple.stackexchange.com/" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="http://wordpress.stackexchange.com/" title="WordPress developers and administrators">WordPress Development</a></li>
+                        <li><a href="http://gis.stackexchange.com/" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="http://electronics.stackexchange.com/" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="http://android.stackexchange.com/" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="http://security.stackexchange.com/" title="information security professionals">Information Security</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://dba.stackexchange.com/" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="http://drupal.stackexchange.com/" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="http://sharepoint.stackexchange.com/" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="http://ux.stackexchange.com/" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="http://mathematica.stackexchange.com/" title="users of Mathematica">Mathematica</a></li>
+                        <li><a href="http://salesforce.stackexchange.com/" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                        <li><a href="http://expressionengine.stackexchange.com/" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (13)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://photo.stackexchange.com/" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="http://scifi.stackexchange.com/" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="http://graphicdesign.stackexchange.com/" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                        <li><a href="http://movies.stackexchange.com/" title="movie and tv enthusiasts">Movies &amp; TV</a></li>
+                        <li><a href="http://cooking.stackexchange.com/" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="http://diy.stackexchange.com/" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="http://money.stackexchange.com/" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                        <li><a href="http://academia.stackexchange.com/" title="academics and those enrolled in higher education">Academia</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (9)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://english.stackexchange.com/" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="http://skeptics.stackexchange.com/" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="http://judaism.stackexchange.com/" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="http://travel.stackexchange.com/" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="http://christianity.stackexchange.com/" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="http://gaming.stackexchange.com/" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                        <li><a href="http://bicycles.stackexchange.com/" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="http://rpg.stackexchange.com/" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (21)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://math.stackexchange.com/" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="http://stats.stackexchange.com/" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="http://cstheory.stackexchange.com/" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="http://physics.stackexchange.com/" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="http://mathoverflow.net/" title="professional mathematicians">MathOverflow</a></li>
+                        <li><a href="http://chemistry.stackexchange.com/" title="scientists, academics, teachers and students">Chemistry</a></li>
+                        <li><a href="http://biology.stackexchange.com/" title="biology researchers, academics, and students">Biology</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (5)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://stackapps.com/" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="http://meta.stackexchange.com/" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                        <li><a href="http://area51.stackexchange.com/" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="http://careers.stackoverflow.com/">Stack Overflow Careers</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</tbody></table>
+                </div>
+            </div>
+            <div id="copyright">
+                site design / logo © 2016 Stack Exchange Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2016.5.10.3565
+            </div>
+        </div>
+    </div>
+    <noscript>
+        <div id="noscript-warning">Stack Overflow works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
+    </noscript>
+        <script> setTimeout(function() { $("#adzerk-user-match").remove(); }, 2000);</script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-1');
+                        ga('set', 'dimension2', '|jquery|jquery-ui|jquery-ui-datepicker|');         ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>
+        
+    
+    
+</body></html>

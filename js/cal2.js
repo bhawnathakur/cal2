@@ -2,9 +2,26 @@
     jQuery(function($) {
     $('.auto').autoNumeric('init');
 }); 
+function formattedDate(date) {
+    var d = new Date(date || Date.now()),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) month = '0' + month;
+    if (day.length < 2) day = '0' + day;
+
+    return [month, day, year].join('/');
+}
 
 function vars()
 {
+	var yearly_interest=Array();
+var yearly_principal=Array();
+var yearly_interest_cum=0;
+var yearly_principal_cum=0;
+var z_num=0;
+	tot_interest=0;
 	var cumulative_interest=0;
 i_d3=parseFloat($('#i_d3').autoNumeric('get'));
 i_d4=parseFloat($('#i_d4').autoNumeric('get'));
@@ -48,15 +65,26 @@ i_d28=parseFloat($('#i_d28').autoNumeric('get'));
 	$('#Scheduled_num_Payments').html(Scheduled_num_Payments);
 	$('#actual_num_Payments').html(Scheduled_num_Payments);
 	Scheduled_Extra_Payments=i_d12;
-	
-	var tbl="";
-	 tbl +="<table width='99%' border='1' id='cml'> <tbody> <tr id='r1'><td width='5%'  align='center'><strong>PmtNo.</strong></td> <td width='10%'  align='center'><strong>Payment Date</strong></td>  <td width='10%'  align='center'><strong>Beginning Balance</strong></td> <td width='10%'  align='center'><strong>Scheduled Payment</strong></td><td width='10%''  align='center'><strong>Extra Payment</strong></td>   <td width='10%'  align='center'><strong>Total Payment</strong></td><td width='10%'  align='center'><strong>Principal</strong></td> <td width='10%'  align='center'><strong>Interest</strong></td> <td width='10%' align='center'><strong>Ending Balance</strong></td>   <td width='10%'  align='center'><strong>Cumulative Interest</strong></td> </tr>";
+	for(z=1;z<Loan_Years+1;z++)
+	{
+	yearly_interest[z]=0;
+	yearly_principal[z]=0;	
+	}
+	var tbl;
+	 tbl +="<table width='99%'   id='cml'> <tbody> <tr id='r1'><td width='5%'  align='center'><strong>PmtNo.</strong></td> <td width='10%'  align='center'><strong>Payment Date</strong></td>  <td width='10%'  align='center'><strong>Beginning Balance</strong></td> <td width='10%'  align='center'><strong>Scheduled Payment</strong></td><td width='10%'  align='center'><strong>Extra Payment</strong></td>   <td width='10%'  align='center'><strong>Total Payment</strong></td><td width='10%'  align='center'><strong>Principal</strong></td> <td width='10%'  align='center'><strong>Interest</strong></td> <td width='10%' align='center'><strong>Ending Balance</strong></td>   <td width='10%'  align='center'><strong>Cumulative Interest</strong></td> </tr>";
 	  for(i=1;i<Scheduled_num_Payments+1;i++)
 	  {
 	 tbl += "<tr><td align='center'><strong>";
 	 tbl +=i ;
 	 
-	 tbl +="</strong></td><td>bal1</td><td>";
+	 tbl +="</strong></td><td>";
+	 var myDate= $("#datepicker" ).datepicker( "getDate" );
+	 
+var myDate1=new Date();
+myDate1.setMonth(myDate.getMonth() + i);
+myDate1.setDate(1);
+tbl+=formattedDate(myDate1);
+	 tbl+="</td><td>";
 	 if(i==1)
 	 {
 		 bal=Loan_Amount;
@@ -67,6 +95,8 @@ i_d28=parseFloat($('#i_d28').autoNumeric('get'));
 	 }
 	 total_amount=Scheduled_Monthly_Payment+Scheduled_Extra_Payments;
 	 interest=(Interest_Rate/(100*Num_Pmt_Per_Year))*bal;
+	 
+	 tot_interest+=interest;
 	 principal=total_amount-interest;
 	 
 	 ending_balance=bal-principal;
@@ -92,12 +122,64 @@ i_d28=parseFloat($('#i_d28').autoNumeric('get'));
 	 tbl+="$ " +cumulative_interest.toFixed(2);
 	 
 	 tbl+="</td></tr>";
+	 
+	 
+	 z=i%12;
+	if(z !=0)
+	{yearly_interest_cum +=interest;
+	yearly_principal_cum +=principal;	
+	}
+	else
+	{
+		yearly_interest_cum +=interest;
+		yearly_principal_cum +=principal;
+		z_num +=1;
+		yearly_interest[z_num]=yearly_interest_cum;
+		 yearly_principal[z_num]=yearly_principal_cum;
+		yearly_interest_cum=0;
+		yearly_principal_cum=0;
+	}
+	 
 	  }
 	  
 	 tbl +="</tbody></table>";
 $("#cml").html(tbl);
 	
 	$('#Scheduled_Extra_Payments').html("$ "+Scheduled_Extra_Payments);
+	
+	for(z=1;z<Loan_Years+1;z++)
+	{
+	$('#int_'+z).html(yearly_interest[z].toFixed(2));
+	$('#pri_'+z).html(yearly_principal[z].toFixed(2));
+	
+	}
+	
+	data_row="";
+	data_row+="<table width='100%' border='1' rules='rows'><tbody>";
+	data_row+="<tr><td>Year</td>";
+	for(z=1;z<31;z++)
+	{
+	data_row+="<td>"+z+"</td>";
+	}
+	data_row+="</tr>";
+	
+	data_row+="<tr><td>Interest Paid</td>";
+	for(z=1;z<31;z++)
+	{
+		if(z=1)
+		{
+	data_row+="<td>"+z+"</td>";
+		}else
+		{
+		}
+	}
+	data_row+="</tr>";
+	
+	data_row+="</tbody></table>";
+	$('#data_row').html(data_row);
+	
+	
+	
 }
  function PMT(i, n, p) {
  return i * p * Math.pow((1 + i), n) / (1 - Math.pow((1 + i), n));
@@ -124,6 +206,7 @@ function cal2()
 {
 	
 	vars();
+	$('#tot_interest').html("$ "+tot_interest.toFixed(2));
 	
 pauseCounting();
 };
