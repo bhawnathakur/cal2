@@ -70,7 +70,7 @@ i_d28=parseFloat($('#i_d28').autoNumeric('get'));
 	yearly_interest[z]=0;
 	yearly_principal[z]=0;	
 	}
-	var tbl;
+	var tbl="";
 	 tbl +="<table width='99%'   id='cml'> <tbody> <tr id='r1'><td width='5%'  align='center'><strong>PmtNo.</strong></td> <td width='10%'  align='center'><strong>Payment Date</strong></td>  <td width='10%'  align='center'><strong>Beginning Balance</strong></td> <td width='10%'  align='center'><strong>Scheduled Payment</strong></td><td width='10%'  align='center'><strong>Extra Payment</strong></td>   <td width='10%'  align='center'><strong>Total Payment</strong></td><td width='10%'  align='center'><strong>Principal</strong></td> <td width='10%'  align='center'><strong>Interest</strong></td> <td width='10%' align='center'><strong>Ending Balance</strong></td>   <td width='10%'  align='center'><strong>Cumulative Interest</strong></td> </tr>";
 	  for(i=1;i<Scheduled_num_Payments+1;i++)
 	  {
@@ -154,29 +154,6 @@ $("#cml").html(tbl);
 	
 	}
 	
-	data_row="";
-	data_row+="<table width='100%' border='1' rules='rows'><tbody>";
-	data_row+="<tr><td>Year</td>";
-	for(z=1;z<31;z++)
-	{
-	data_row+="<td>"+z+"</td>";
-	}
-	data_row+="</tr>";
-	
-	data_row+="<tr><td>Interest Paid</td>";
-	for(z=1;z<31;z++)
-	{
-		if(z=1)
-		{
-	data_row+="<td>"+z+"</td>";
-		}else
-		{
-		}
-	}
-	data_row+="</tr>";
-	
-	data_row+="</tbody></table>";
-	$('#data_row').html(data_row);
 	
 	
 	
