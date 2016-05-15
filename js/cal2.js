@@ -13,11 +13,11 @@ function formattedDate(date) {
 
     return [month, day, year].join('/');
 }
-
-function vars()
-{
 	var yearly_interest=Array();
 var yearly_principal=Array();
+function vars()
+{
+
 var yearly_interest_cum=0;
 var yearly_principal_cum=0;
 var z_num=0;
@@ -138,6 +138,8 @@ tbl+=formattedDate(myDate1);
 		 yearly_principal[z_num]=yearly_principal_cum;
 		yearly_interest_cum=0;
 		yearly_principal_cum=0;
+		
+		
 	}
 	 
 	  }
@@ -178,11 +180,33 @@ function continueCounting() {
 
   doCount();
 }
+function dataPage(){
+	for(i=1;i<31;i++)
+	{
+		$('#year_'+i).html(i);
+		$('#interest_paid_'+i).html(yearly_interest[i].toFixed(0));
+		
+		if(i==1)
+		{
+			taxes_paid=i_d17;
+			$('#taxes_paid_'+i).html(taxes_paid.toFixed(0));
+		}
+		else
+		{
+			taxes_paid=taxes_paid*(1+i_d18/100);
+			$('#taxes_paid_'+i).html(taxes_paid.toFixed(0));
+		}
+		
+		
+	}
+	
+}
 
 function cal2()
 {
 	
 	vars();
+	dataPage();
 	$('#tot_interest').html("$ "+tot_interest.toFixed(2));
 	
 pauseCounting();

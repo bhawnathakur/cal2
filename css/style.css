@@ -6,4 +6,11 @@
 }
 #cml tr td {
   text-align: center;
+
+ 
+}
+.bld{ font-size:11px;}
+#tbl4  td{ height:35px; border-collapse:collapse;   border:solid 3px red;   }
+
+#tbl4{border-collapse:collapse;
 }
